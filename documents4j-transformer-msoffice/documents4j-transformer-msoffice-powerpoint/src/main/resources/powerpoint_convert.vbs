@@ -15,7 +15,7 @@ Function ConvertFile( inputFile, outputFile, formatEnumeration )
 
   ' Get the running instance of MS PowerPoint. If PowerPoint is not running, exit the conversion.
   
-  Set powerpointApplication = CreateObject( ,"PowerPoint.Application")
+  Set powerpointApplication = CreateObject(, "PowerPoint.Application")
   If Err <> 0 Then
     WScript.Quit -6
   End If
