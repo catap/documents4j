@@ -8,14 +8,11 @@ If Err = 0 Then
   WScript.Quit 3
 End If
 
-' Start MS Word.
+' Start MS PowerPoint.
 Set powerpointApplication = CreateObject("PowerPoint.Application")
 If Err = 0 Then
   WScript.Quit -6
 End If
-
-' Disable execution of macros.
-' powerpointApplication.WordBasic.DisableAutoMacros
 
 ' Exit and signal success.
 WScript.Quit 3

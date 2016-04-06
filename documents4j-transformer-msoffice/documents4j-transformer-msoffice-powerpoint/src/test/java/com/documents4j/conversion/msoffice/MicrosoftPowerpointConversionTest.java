@@ -26,9 +26,12 @@ public class MicrosoftPowerpointConversionTest extends AbstractMicrosoftOfficeCo
     @Parameterized.Parameters
     public static Collection<Object[]> data() {
         return Arrays.asList(new Object[][]{
-                {PPTX_VALID, PPTX_CORRUPT, PPTX_INEXISTENT, DocumentType.MS_EXCEL, DocumentType.PDF, "pdf", true},
-                {PPT_VALID, PPT_CORRUPT, PPT_INEXISTENT, DocumentType.DOC, DocumentType.PDF, "pdf", false},
-                {PPT_VALID, PPT_CORRUPT, PPT_INEXISTENT, DocumentType.XLS, DocumentType.XLSX, "pptx", false}
+                {PPTX_VALID, PPTX_CORRUPT, PPTX_INEXISTENT, DocumentType.MS_POWERPOINT, DocumentType.PDF, "pdf", true},
+//                {PPTX_VALID, PPTX_CORRUPT, PPTX_INEXISTENT, DocumentType.MS_POWERPOINT, DocumentType.PPT, "pdf", true},
+//                {PPT_VALID, PPT_CORRUPT, PPT_INEXISTENT, DocumentType.MS_POWERPOINT, DocumentType.PDF, "pdf", true},
+//                {PPT_VALID, PPT_CORRUPT, PPT_INEXISTENT, DocumentType.PPT, DocumentType.PPTX, "pptx", true},
+//                {PPTX_VALID, PPTX_CORRUPT, PPTX_INEXISTENT, DocumentType.PPTX, DocumentType.PDF, "pptx", true},
+//                {PPTX_VALID, PPTX_CORRUPT, PPTX_INEXISTENT, DocumentType.PPTX, DocumentType.PPT, "pptx", true}
         });
     }
 

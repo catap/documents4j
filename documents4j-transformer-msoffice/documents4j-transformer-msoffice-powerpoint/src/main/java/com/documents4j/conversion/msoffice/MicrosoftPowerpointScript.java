@@ -12,7 +12,7 @@ import java.io.IOException;
 import java.util.Random;
 
 /**
- * VBS Scripts for communicating with MS Excel.
+ * VBS Scripts for communicating with MS PowerPoint.
  */
 enum MicrosoftPowerpointScript implements MicrosoftOfficeScript {
 

@@ -12,7 +12,7 @@ import java.util.concurrent.TimeUnit;
 import static com.documents4j.api.DocumentType.Value.*;
 
 /**
- * A converter back-end for MS Excel.
+ * A converter back-end for MS PowerPoint.
  */
 @ViableConversion(
         from = {APPLICATION + "/" + PPT,
@@ -28,8 +28,8 @@ public class MicrosoftPowerpointBridge extends AbstractMicrosoftOfficeBridge {
     private static final Object POWERPOINT_LOCK = new Object();
 
     /**
-     * Other than MS Word, MS Excel does not behave well under stress. Thus, MS
-     * Excel must not be asked to convert more than one document at a time.
+     * Other than MS Word, MS PowerPoint does not behave well under stress. Thus, MS
+     * PowerPoint must not be asked to convert more than one document at a time.
      */
     private static final Semaphore CONVERSION_LOCK = new Semaphore(1, true);
 

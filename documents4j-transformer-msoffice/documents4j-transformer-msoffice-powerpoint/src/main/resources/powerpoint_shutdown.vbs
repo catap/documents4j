@@ -1,17 +1,17 @@
 Const WdDoNotSaveChanges = 0
 
-' Try to get currently running instance of MS Word.
+' Try to get currently running instance of MS PowerPoint.
 On Error Resume Next
-Dim wordApplication
-Set wordApplication = GetObject(, "PowerPoint.Application")
+Dim powerpointApplication
+Set powerpointApplication = GetObject(, "PowerPoint.Application")
 
-' If no such instance can be found, MS Word is already shut down.
+' If no such instance can be found, MS PowerPoint is already shut down.
 If Err <> 0 Then
   WScript.Quit 3
 End If
 
-' Try to shut down MS Word.
-wordApplication.Quit WdDoNotSaveChanges
+' Try to shut down MS PowerPoint.
+powerpointApplication.Quit WdDoNotSaveChanges
 
 ' If this was impossible, exit with an error.
 If Err <> 0 Then

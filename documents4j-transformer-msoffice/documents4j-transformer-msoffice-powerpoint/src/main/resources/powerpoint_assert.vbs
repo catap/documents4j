@@ -3,8 +3,8 @@
 On Error Resume Next
 
 ' Try to get running MS PowerPoint instance.
-Dim excelApplication
-Set excelApplication = GetObject(, "PowerPoint.Application")
+Dim powerpointApplication
+Set powerpointApplication = GetObject(, "PowerPoint.Application")
 
 ' Signal whether or not such an instance could not be found.
 If Err <> 0 then

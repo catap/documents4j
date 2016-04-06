@@ -3,9 +3,7 @@ package com.documents4j.conversion.msoffice;
 import com.documents4j.api.DocumentType;
 
 /**
- * An enumeration of <a href=
- * "http://msdn.microsoft.com/en-us/library/bb241279%28v=office.12%29.aspx">MS
- * Excel file format encodings</a>.
+ * An enumeration of <a href="http://msdn.microsoft.com/en-us/library/bb241279%28v=office.12%29.aspx">MS PowerPoint file format encodings</a>.
  */
 enum MicrosoftPowerpointFormat implements MicrosoftOfficeFormat {
 
