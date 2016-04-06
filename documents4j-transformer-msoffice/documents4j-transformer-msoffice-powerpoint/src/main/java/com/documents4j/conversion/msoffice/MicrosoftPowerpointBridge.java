@@ -14,9 +14,13 @@ import static com.documents4j.api.DocumentType.Value.*;
 /**
  * A converter back-end for MS Excel.
  */
-@ViableConversion(from = { APPLICATION + "/" + PPT, APPLICATION + "/" + PPTX,
-        APPLICATION + "/" + POWERPOINT_ANY }, to = { APPLICATION + "/" + PDF, APPLICATION + "/" + PPT,
-                APPLICATION + "/" + PPTX })
+@ViableConversion(
+        from = {APPLICATION + "/" + PPT,
+                APPLICATION + "/" + PPTX,
+                APPLICATION + "/" + POWERPOINT_ANY},
+        to = {APPLICATION + "/" + PDF,
+                APPLICATION + "/" + PPT,
+                APPLICATION + "/" + PPTX})
 public class MicrosoftPowerpointBridge extends AbstractMicrosoftOfficeBridge {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(MicrosoftPowerpointBridge.class);

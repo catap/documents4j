@@ -3,8 +3,7 @@ package com.documents4j.api;
 import java.io.Serializable;
 
 /**
- * Represents an immutable document
- * <a href="http://en.wikipedia.org/wiki/Internet_media_type">MIME</a> type.
+ * Represents an immutable document <a href="http://en.wikipedia.org/wiki/Internet_media_type">MIME</a> type.
  */
 public class DocumentType implements Serializable, Comparable<DocumentType> {
     public static final DocumentType MS_WORD = new DocumentType(Value.APPLICATION, Value.WORD_ANY);
@@ -32,10 +31,8 @@ public class DocumentType implements Serializable, Comparable<DocumentType> {
     /**
      * Creates a new document type.
      *
-     * @param type
-     *            The MIME type's type name.
-     * @param subtype
-     *            The MIME type's subtype name.
+     * @param type The MIME type's type name.
+     * @param subtype The MIME type's subtype name.
      */
     public DocumentType(String type, String subtype) {
         if (type == null || subtype == null) {
@@ -48,9 +45,7 @@ public class DocumentType implements Serializable, Comparable<DocumentType> {
     /**
      * Creates a new document type.
      *
-     * @param fullType
-     *            The MIME type's type name and subtype name, separated by a
-     *            {@code /}.
+     * @param fullType The MIME type's type name and subtype name, separated by a {@code /}.
      */
     public DocumentType(String fullType) {
         int separator = fullType.indexOf('/');
@@ -72,10 +67,8 @@ public class DocumentType implements Serializable, Comparable<DocumentType> {
 
     @Override
     public boolean equals(Object other) {
-        if (this == other)
-            return true;
-        if (other == null || getClass() != other.getClass())
-            return false;
+        if (this == other) return true;
+        if (other == null || getClass() != other.getClass()) return false;
         DocumentType documentType = (DocumentType) other;
         return subtype.equals(documentType.subtype) && type.equals(documentType.type);
     }
@@ -96,8 +89,7 @@ public class DocumentType implements Serializable, Comparable<DocumentType> {
     }
 
     /**
-     * A holder type for type and subtype names of known
-     * {@link com.documents4j.api.DocumentType}s.
+     * A holder type for type and subtype names of known {@link com.documents4j.api.DocumentType}s.
      */
     public static class Value {
 
