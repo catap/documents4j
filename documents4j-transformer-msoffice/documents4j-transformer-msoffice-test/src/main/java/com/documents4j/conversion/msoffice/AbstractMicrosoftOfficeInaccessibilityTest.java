@@ -17,7 +17,7 @@ public abstract class AbstractMicrosoftOfficeInaccessibilityTest extends Abstrac
     @Test(timeout = DEFAULT_CONVERSION_TIMEOUT)
     public void testInaccessible() throws Exception {
         getAssertionEngine().assertRunning();
-        // Start another converter to emulate an external shut down of MS Word.
+        // Start another converter to emulate an external shut down of MS Office component.
         File otherFolder = Files.createTempDir();
         getAssertionEngine().kill();
         assertTrue(otherFolder.delete());

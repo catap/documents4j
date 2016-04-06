@@ -23,7 +23,6 @@ Function ConvertFile( inputFile, outputFile, formatEnumeration )
   ' Find the source file on the file system.
   Set fileSystemObject = CreateObject("Scripting.FileSystemObject")
   inputFile = fileSystemObject.GetAbsolutePathName(inputFile)
-
   
   ' Convert the source file only if it exists.
   If fileSystemObject.FileExists(inputFile) Then

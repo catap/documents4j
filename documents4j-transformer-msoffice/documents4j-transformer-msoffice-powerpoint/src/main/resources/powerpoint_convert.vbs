@@ -15,7 +15,11 @@ Function ConvertFile( inputFile, outputFile, formatEnumeration )
 
   ' Get the running instance of MS PowerPoint. If PowerPoint is not running, exit the conversion.
   
-  Set powerpointApplication = CreateObject("PowerPoint.Application")
+  Set powerpointApplication = CreateObject( ,"PowerPoint.Application")
+  If Err <> 0 Then
+    WScript.Quit -6
+  End If
+  On Error GoTo 0
 
   ' Find the source file on the file system.
   Set fileSystemObject = CreateObject("Scripting.FileSystemObject")
@@ -26,7 +30,7 @@ Function ConvertFile( inputFile, outputFile, formatEnumeration )
 
     ' Attempt to open the source document.
     On Error Resume Next
-    Set powerpointPresentation = powerpointApplication.Presentations.Open(inputFile, , , FALSE)
+    Set powerpointPresentation = powerpointApplication.Presentations.Open(inputFile, , , False)
     If Err <> 0 Then
         WScript.Quit -2
     End If
