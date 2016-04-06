@@ -8,9 +8,9 @@ import java.io.IOException;
 
 public enum MicrosoftPowerpointPresentation implements Document {
 
-    PPT_VALID("/valid.xls"), PPT_CORRUPT("/corrupt.xls"), PPT_INEXISTENT("/inexistent.xls"),
+    PPT_VALID("/valid.ppt"), PPT_CORRUPT("/corrupt.ppt"), PPT_INEXISTENT("/inexistent.ppt"),
 
-    PPTX_VALID("/valid.xlsx"), PPTX_CORRUPT("/corrupt.xlsx"), PPTX_INEXISTENT("/inexistent.xlsx");
+    PPTX_VALID("/valid.pptx"), PPTX_CORRUPT("/corrupt.pptx"), PPTX_INEXISTENT("/inexistent.pptx");
 
     private final String path;
 
