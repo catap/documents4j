@@ -33,6 +33,7 @@ Function ConvertFile( inputFile, outputFile, formatEnumeration )
     ' Attempt to open the source document.
     On Error Resume Next
 
+    wordApplication.DisplayAlerts = False
     ' Open: See https://msdn.microsoft.com/en-us/library/office/ff835182.aspx
     Set wordDocument = wordApplication.Documents.Open(inputFile, _
                                                       False, _
